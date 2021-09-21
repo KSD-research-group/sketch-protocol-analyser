@@ -1,0 +1,9 @@
+.menu {
+  min-width: none;
+  max-width: none;
+}
+
+.offset {
+  width: 200px;
+  margin: 0 10px;
+}

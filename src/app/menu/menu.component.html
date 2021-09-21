@@ -1,0 +1,13 @@
+<button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+  <mat-icon>more_vert</mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item (click)="openCreateDialog()">
+    <mat-icon>person_add</mat-icon>
+    <span>New session</span>
+  </button>
+  <button mat-menu-item (click)="openSelectDialog()" *ngIf="configs && configs.length > 0">
+    <mat-icon>launch</mat-icon>
+    <span>Open session</span>
+  </button>
+</mat-menu>

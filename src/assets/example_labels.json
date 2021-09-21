@@ -1,0 +1,30 @@
+[
+  {
+    "id": "urn:sketch:label:object",
+    "name": "Objects",
+    "types": [
+      { "id": "urn:sketch:label:object:type:room", "name": "room" },
+      { "id": "urn:sketch:label:object:type:wall", "name": "wall" },
+      { "id": "urn:sketch:label:object:type:door", "name": "door" },
+      { "id": "urn:sketch:label:object:type:window", "name": "window" },
+      { "id": "urn:sketch:label:object:type:furniture", "name": "furniture" }
+    ]
+  },
+  {
+    "id": "urn:sketch:label:theme",
+    "name": "Cognitive Themes",
+    "types": [
+      { "id": "urn:sketch:label:theme:analysis", "name": "analysis" },
+      { "id": "urn:sketch:label:theme:synthesis", "name": "synthesis" },
+      { "id": "urn:sketch:label:theme:evaluation", "name": "evaluation" }
+    ]
+  },
+  {
+    "id": "urn:sketch:label:topic",
+    "name": "Reflective Practioner",
+    "types": [
+      { "id": "urn:sketch:label:topic:practice", "name": "practice" },
+      { "id": "urn:sketch:label:topic:reflection", "name": "reflection" }
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+<mat-accordion class="no-select">
+  <mat-expansion-panel *ngFor="let group of labelData" (opened)="panelOpenState = true"
+    (closed)="panelOpenState = false">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{group.name}}
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <app-label-control [labelGroup]=group></app-label-control>
+  </mat-expansion-panel>
+</mat-accordion>

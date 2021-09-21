@@ -1,0 +1,9 @@
+<sub>
+  <span *ngIf="!selected">Select</span>
+  <ng-content></ng-content><em *ngIf="file"> {{(file.name.length > 16)? (file.name | slice:0:16) + '...' : (file.name)}}</em>
+</sub>
+
+<button mat-icon-button color="accent" (click)="openFileInput()" [attr.aria-label]="'Open file picker'">
+  <mat-icon>{{loaded ? "done" : loading ? "pending" : selected ? "upload" : "upload_file"}}</mat-icon>
+</button>
+<input type="file" style="display: none" #fileInput [accept]="filetype" (change)="onFileInput()" />

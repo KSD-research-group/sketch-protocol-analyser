@@ -1,0 +1,11 @@
+<mat-form-field class="type-chip-list">
+  <mat-label></mat-label>
+  <mat-chip-list #chipList aria-label="Type selection">
+    <mat-chip *ngFor="let type of types" (click)="type.select()">
+      {{type.name}}
+      <app-control-set class="line-height-0" [label]="type"></app-control-set>
+    </mat-chip>
+  </mat-chip-list>
+  <input placeholder="New type ..." [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+    matChipInputAddOnBlur="true" (matChipInputTokenEnd)="add($event)" class="space-top">
+</mat-form-field>

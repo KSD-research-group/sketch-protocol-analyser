@@ -1,0 +1,9 @@
+<mat-icon [class.solo]="solo" (click)="clickSolo($event)">
+  {{solo ? "add_circle" : "add_circle_outline"}}
+</mat-icon>
+<mat-icon [class.mute]="muted" (click)="clickMute($event)">
+  {{muted ? "remove_circle" : "remove_circle_outline"}}
+</mat-icon>
+<mat-icon (click)="clickRemove($event)">
+  cancel
+</mat-icon>

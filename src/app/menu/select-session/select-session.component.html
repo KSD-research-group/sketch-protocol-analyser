@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>Select Session</h1>
+<div mat-dialog-content>
+  <mat-action-list *ngIf="configs">
+    <button *ngFor="let config of configs" (click)="selectSession(config.id)" mat-list-item
+      mat-dialog-close>{{config.name}}</button>
+  </mat-action-list>
+  <strong *ngIf="!configs">
+    No configs available. Select 'New session' from menu.
+  </strong>
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Cancel</button>
+</div>

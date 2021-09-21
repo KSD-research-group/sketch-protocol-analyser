@@ -1,0 +1,32 @@
+<div class="flex">
+  <mat-button-toggle-group name="fontStyle" aria-label="Font Style" [value]="selectType.STROKE"
+    (change)="setSelectType()" #selectTypeGroup="matButtonToggleGroup">
+    <mat-button-toggle [value]="selectType.POINT" matTooltip="Toggle selection of single point ('p')">
+      <mat-icon aria-hidden="false" aria-label="Point">grain</mat-icon>
+    </mat-button-toggle>
+    <mat-button-toggle [value]="selectType.STROKE"
+      matTooltip="Toggle selection of all points that belong a stroke ('s')">
+      <mat-icon aria-hidden="false" aria-label="Strokes">linear_scale</mat-icon>
+    </mat-button-toggle>
+    <mat-button-toggle [value]="selectType.BRUSH" matTooltip="Select points with brush ('b')">
+      <mat-icon aria-hidden="false" aria-label="Brush">photo_size_select_small</mat-icon>
+    </mat-button-toggle>
+    <mat-button-toggle [value]="selectType.UNBRUSH" matTooltip="Unselect points with brush ('n')">
+      <mat-icon aria-hidden="false" aria-label="Brush">tab_unselected</mat-icon>
+    </mat-button-toggle>
+    <mat-button-toggle [value]="selectType.SELECT_ALL" matTooltip="Select all points ('ctrl' + 'a')">
+      <mat-icon aria-hidden="false" aria-label="Brush">select_all</mat-icon>
+    </mat-button-toggle>
+    <mat-button-toggle [value]="selectType.UNSELECT_ALL" matTooltip="Unselect all points ('ctrl' + 'u')">
+      <mat-icon aria-hidden="false" aria-label="Brush">crop_din</mat-icon>
+    </mat-button-toggle>
+  </mat-button-toggle-group>
+  <div>
+    <span class="mute">{{timeMS | date:'HH:mm:ss':"UTC"}}</span>
+    <app-time-offset-control for="sketch" matTooltip="Set timing offset for sketch clock"></app-time-offset-control>
+    <button mat-icon-button (click)="rotate()" color="link">
+      <mat-icon aria-hidden="false" aria-label="Rotate right" matTooltip="Rotate sketch right">rotate_right</mat-icon>
+    </button>
+  </div>
+
+</div>

@@ -1,0 +1,31 @@
+<div class="flex-container">
+  <mat-card class="fixed-height space width-same">
+    <mat-card-header>
+      <h2>Transcript</h2>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-tab-group>
+        <mat-tab label="Think aloud">
+          <app-transcript id="tap"></app-transcript>
+        </mat-tab>
+        <mat-tab label="Retrospective">
+          <app-transcript id="retro"></app-transcript>
+        </mat-tab>
+      </mat-tab-group>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="fixed-height space">
+    <mat-card-header>
+      <h2>
+        Sketch
+      </h2>
+    </mat-card-header>
+    <mat-card-content>
+      <app-sketch></app-sketch>
+    </mat-card-content>
+    <mat-card-actions>
+      <app-sketch-controls></app-sketch-controls>
+    </mat-card-actions>
+  </mat-card>
+</div>

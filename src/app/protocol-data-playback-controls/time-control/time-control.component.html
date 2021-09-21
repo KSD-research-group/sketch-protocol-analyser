@@ -1,0 +1,5 @@
+<div class="container">
+  <mat-slider [min]="min" [max]="max" [value]="value" (input)="onTimeSliderChange($event)" class="grow"></mat-slider>
+  <mat-label>{{value | date:'HH:mm:ss':"UTC"}}</mat-label> /
+  <mat-label>{{max | date:'HH:mm:ss':"UTC"}}</mat-label>
+</div>

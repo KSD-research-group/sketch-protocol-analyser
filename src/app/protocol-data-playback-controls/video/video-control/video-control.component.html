@@ -1,0 +1,7 @@
+<div class="align">
+  <button mat-icon-button color="accent" aria-label="play/pause" [disabled]="true">
+    <mat-icon>{{paused ? "pause" : "play_arrow"}}</mat-icon>
+  </button>
+  <div class="mute">{{timeMS | date:'HH:mm:ss':"UTC"}}</div>
+  <app-volume-control [for]="for"></app-volume-control>
+</div>

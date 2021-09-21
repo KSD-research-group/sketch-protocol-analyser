@@ -1,0 +1,16 @@
+/* .fixed-height {
+  height: 590px;
+} */
+
+.flex-container {
+  display: flex;
+}
+
+.space {
+  margin: 5px;
+}
+
+.width-same {
+  flex: 1 1 0px;
+}
+

@@ -1,0 +1,6 @@
+<mat-action-list>
+  <button mat-list-item *ngFor="let i of instances" (click)="i.select()">
+    <div>{{i.name}}</div>
+    <app-control-set class="line-height-0" [label]="i"></app-control-set>
+  </button>
+</mat-action-list>

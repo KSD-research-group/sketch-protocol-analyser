@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  padding: 0 24px;
+}
+
+.item-l {
+  flex-grow: 0;
+}
+
+.item-l {
+  flex-grow: 2;
+  width: 500px;
+}
+
+.item-s {
+  flex-grow: 1;
+}
+
+.space {
+  margin: 5px;
+  margin-top: 10px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}

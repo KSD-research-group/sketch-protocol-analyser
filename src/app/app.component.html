@@ -1,0 +1,36 @@
+<mat-toolbar>
+  <app-menu></app-menu>
+  <span>Sketching Protocol Analyser</span>
+  <span class="spacer"></span>
+  <span style="float: right;" *ngIf="session">{{session.name}}</span>
+</mat-toolbar>
+
+<div class="container" *ngIf="session">
+  <div class="item-0">
+    <mat-card class="space">
+      <mat-card-header>
+        <mat-card-subtitle>
+          Data Playback
+        </mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <app-protocol-data-playback-controls></app-protocol-data-playback-controls>
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="item-s space">
+      <mat-card-header>
+        <mat-card-subtitle>
+          Data Labeler
+        </mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <app-protocol-data-label-controls></app-protocol-data-label-controls>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="item-l">
+    <app-protocol-data-display></app-protocol-data-display>
+  </div>
+</div>
+
+<app-hello *ngIf="!session"></app-hello>

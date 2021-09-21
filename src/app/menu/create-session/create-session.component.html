@@ -1,0 +1,56 @@
+<h1 mat-dialog-title>Create Session</h1>
+
+<div mat-dialog-content>
+  <mat-form-field appearance="fill">
+    <mat-label>Participant name</mat-label>
+    <input matInput placeholder="John Doe" autocomplete="off" #name (change)="changeUserName($event)">
+  </mat-form-field>
+
+  <mat-list>
+    <mat-list-item>
+      <app-file-selector (change)="handleChange()" [filetype]="FILE_TYPE_JSON" #sketch>
+        Sketch
+      </app-file-selector>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>
+      <app-file-selector (change)="handleChange()" [filetype]="FILE_TYPE_JSON" #labels>
+        Label
+      </app-file-selector>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>
+      <app-file-selector (change)="handleChange()" [filetype]="FILE_TYPE_JSON" #tapTranscript>
+        Think aloud transcript
+      </app-file-selector>
+    </mat-list-item>
+    <mat-list-item>
+      <app-file-selector (change)="handleChange()" [filetype]="FILE_TYPE_JSON" #retroTranscript>
+        Retrospective transcript
+      </app-file-selector>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>
+      <app-file-selector (change)="handleChange()" [filetype]="FILE_TYPE_VIDEO" #tapVideo>
+        Think aloud video
+      </app-file-selector>
+    </mat-list-item>
+    <mat-list-item>
+      <app-file-selector (change)="handleChange()" [filetype]="FILE_TYPE_VIDEO" #retroVideo>
+        Think aloud video
+      </app-file-selector>
+    </mat-list-item>
+    <mat-list-item>
+      <app-file-selector (change)="handleChange()" [filetype]="FILE_TYPE_JSON" #correlations>
+        Correlations
+      </app-file-selector>
+    </mat-list-item>
+  </mat-list>
+</div>
+
+<div mat-dialog-actions align="end">
+  <button mat-flat-button mat-dialog-close>Cancel</button>
+  <button mat-flat-button color="accent" cdkFocusInitial (click)="upload()" [disabled]="!creatable"
+    *ngIf="!done">Create</button>
+  <button mat-flat-button color="primary" *ngIf="done" (click)="apply()" mat-dialog-close>Apply</button>
+</div>

@@ -1,0 +1,11 @@
+.paragraph {
+  display: flex;
+}
+
+.paragraph div {
+  margin-right: 18px;
+}
+
+.no-select {
+  user-select: none;
+}

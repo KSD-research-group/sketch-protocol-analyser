@@ -1,0 +1,6 @@
+<mat-chip-list aria-label="labels" *ngIf="labels">
+  <mat-chip *ngFor="let label of labelInstances" (click)="clickSelect(label)">
+    {{label.name}}
+    <mat-icon matChipRemove (click)="clickRemove(label)">cancel</mat-icon>
+  </mat-chip>
+</mat-chip-list>

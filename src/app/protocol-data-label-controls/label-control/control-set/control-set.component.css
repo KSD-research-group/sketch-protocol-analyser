@@ -1,0 +1,38 @@
+mat-icon:first-child {
+  margin-left: 8px;
+}
+
+:not(mat-icon:first-child) {
+  margin-left: 0px;
+}
+
+.mat-icon {
+  opacity: 0.4;
+  font-size: 18px;
+  height: 18px;
+  width: 18px;
+}
+
+.mat-icon:hover {
+  opacity: 0.6;
+}
+
+.mat-icon.solo {
+  color: green;
+  opacity: 0.8;
+}
+
+.mat-icon.solo:hover {
+  color: green;
+  opacity: 1 !important;
+}
+
+.mat-icon.mute {
+  color: red;
+  opacity: 0.8;
+}
+
+.mat-icon.mute:hover {
+  color: red;
+  opacity: 1 !important;
+}

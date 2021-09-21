@@ -1,0 +1,14 @@
+<div *ngIf="paragraph" class="paragraph" #container>
+  <div class="no-select">
+    <strong>{{paragraph.speaker.name}}</strong><br>
+    <sub>{{paragraph.words[0].time | date:'HH:mm:ss':"UTC"}}</sub>
+  </div>
+  <div>
+    <p>
+      <app-word *ngFor="let word of paragraph.words" [word]="word"></app-word>
+    </p>
+  </div>
+  <div class="no-select">
+    <app-labels [labels]="paragraph.labels"></app-labels>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<div class="container">
+  <app-playpause-control class="shrink"></app-playpause-control>
+  <app-time-control class="grow"></app-time-control>
+  <!-- <app-time-offset-control class="shrink"></app-time-offset-control> -->
+</div>
+
+<mat-accordion multi="true">
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title class="header">
+        <div class="container">
+          <div class="grow">
+            Think aloud
+          </div>
+          <app-video-control for="tap" ></app-video-control>
+        </div>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div>
+      <app-video id="tap" [muted]="true"></app-video>
+    </div>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title class="header">
+        <div class="container">
+          <div class="grow">
+            Retrospective
+          </div>
+          <app-video-control for="retro" ></app-video-control>
+        </div>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div>
+      <app-video id="retro" [muted]="false"></app-video>
+    </div>
+  </mat-expansion-panel>
+</mat-accordion>
